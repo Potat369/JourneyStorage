@@ -9,7 +9,7 @@ Simple mod that integrate journey mode with [url=https://steamcommunity.com/shar
 [/list]
 
 [h2] Contact me[/h2]
-Text me in [url=https://discordapp.com/users/629733729170096156] Discord [/url], or open issue on [url=https://github.com/Potat369/JourneyStorage] Github [/url]
+Text me in [url=https://discordapp.com/users/629733729170096156] Discord [/url]
 
 [h2] Support [/h2]
 If you [b] willing [/b] to support me, you can:
