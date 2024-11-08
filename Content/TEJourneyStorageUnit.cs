@@ -17,9 +17,9 @@ public class TEJourneyStorageUnit : TEAbstractStorageUnit
 
 	public override bool ValidTile(in Tile tile) => tile.TileType == ModContent.TileType<JourneyStorageUnit>() && tile is { TileFrameX: 0, TileFrameY: 0 };
 
-	public override bool HasSpaceInStackFor(Item check) => _items[check.type] != null;
+	public override bool HasSpaceInStackFor(Item check) => _items[check.type] != null && check.prefix == 0;
 
-	public override bool HasItem(Item check, bool ignorePrefix = false) => !Inactive;
+	public override bool HasItem(Item check, bool ignorePrefix = false) => !Inactive && _items[check.type] != null && check.prefix == 0;
 
 	public override IEnumerable<Item> GetItems()
 	{
@@ -48,6 +48,6 @@ public class TEJourneyStorageUnit : TEAbstractStorageUnit
 
 	public override Item TryWithdraw(Item lookFor, bool locked = false, bool keepOneIfFavorite = false)
 	{
-		return _items[lookFor.type] != null ? lookFor.Clone() : lookFor;
+		return _items[lookFor.type] != null && lookFor.prefix == 0 ? lookFor.Clone() : lookFor;
 	}
 }
