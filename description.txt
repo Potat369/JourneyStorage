@@ -1,1 +1,1 @@
-Modify this file with a description of your mod.
+Simple mod that integrate journey mode with MagicStorage by adding JourneyStorageUnit which will store all of your researched items in your MagicStorage system. 

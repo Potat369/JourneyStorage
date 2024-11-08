@@ -1,0 +1,19 @@
+﻿[h1] Expect bugs! [/h1]
+[h2] Description [/h2]
+Simple mod that integrate journey mode with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2563309347] MagicStorage [/url] by adding JourneyStorageUnit which will store all of your researched items in your MagicStorage system. 
+
+[h2] Craft [/h2]
+[list]
+	[*] Storage component.
+	[*] Any diamond.
+[/list]
+
+[h2] Contact me[/h2]
+Text me in [url=https://discordapp.com/users/629733729170096156] Discord [/url], or open issue on [url=https://github.com/Potat369/JourneyStorage] Github [/url]
+
+[h2] Support [/h2]
+If you [b] willing [/b] to support me, you can:
+[list]
+	[*] Tell others about my work.
+	[*] Donate me on [url=https://ko-fi.com/potat369] Ko-fi [/url]. [b] It's completely optional [/b]
+[/list]
