@@ -1,4 +1,4 @@
 displayName = Journey Storage
 author = Potat369
-version = 1.0.0
+version = 1.0.1
 modReferences = MagicStorage, SerousCommonLib
