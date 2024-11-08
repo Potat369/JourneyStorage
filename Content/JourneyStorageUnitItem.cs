@@ -1,4 +1,6 @@
-﻿using Terraria.ID;
+﻿using MagicStorage.Items;
+using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace JourneyStorage.Content;
@@ -18,5 +20,14 @@ public class JourneyStorageUnitItem : ModItem
         Item.consumable = true;
         Item.rare = ItemRarityID.White;
         Item.createTile = ModContent.TileType<JourneyStorageUnit>();
+    }
+    
+    public override void AddRecipes()
+    {
+        var recipe = CreateRecipe();
+        recipe.AddIngredient<StorageComponent>();
+        recipe.AddRecipeGroup("MagicStorage:AnyDiamond", 1);
+        recipe.AddTile(TileID.WorkBenches);
+        recipe.Register();
     }
 }
