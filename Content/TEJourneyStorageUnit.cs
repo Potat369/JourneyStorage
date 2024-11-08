@@ -17,7 +17,7 @@ public class TEJourneyStorageUnit : TEAbstractStorageUnit
 
 	public override bool ValidTile(in Tile tile) => tile.TileType == ModContent.TileType<JourneyStorageUnit>() && tile is { TileFrameX: 0, TileFrameY: 0 };
 
-	public override bool HasSpaceInStackFor(Item check) => false;
+	public override bool HasSpaceInStackFor(Item check) => _items[check.type] != null;
 
 	public override bool HasItem(Item check, bool ignorePrefix = false) => !Inactive;
 
@@ -25,6 +25,7 @@ public class TEJourneyStorageUnit : TEAbstractStorageUnit
 	{
 		if (_items == null)
 			_items = new Item[ItemLoader.ItemCount];
+		_sacrifices.Clear();
 		Main.LocalPlayerCreativeTracker.ItemSacrifices.FillListOfItemsThatCanBeObtainedInfinitely(_sacrifices);
 		foreach (var id in _sacrifices)
 		{
@@ -42,13 +43,11 @@ public class TEJourneyStorageUnit : TEAbstractStorageUnit
 
 	public override void DepositItem(Item toDeposit)
 	{
-		
+		toDeposit.stack = 0;
 	}
 
 	public override Item TryWithdraw(Item lookFor, bool locked = false, bool keepOneIfFavorite = false)
 	{
-		return Inactive ? new Item() : lookFor.Clone();
+		return _items[lookFor.type] != null ? lookFor.Clone() : lookFor;
 	}
-	
-	
 }
